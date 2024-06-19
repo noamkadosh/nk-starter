@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Content as Hero, frontmatter } from "../content/resume/hero.md";
+import { Content as Body } from "../content/resume/body.md";
+import { Content as Sidebar } from "../content/resume/sidebar.md";
+
+const { title, pdfLink, noIndex, description } = frontmatter;
+---
+
+<Layout
+  title={title}
+  pdfLink={pdfLink}
+  noIndex={noIndex}
+  description={description}
+>
+  <Hero />
+  <div class="flex flex-row-reverse gap-4">
+    <div>
+      <Body />
+    </div>
+    <div>
+      <Sidebar />
+    </div>
+  </div>
+</Layout>

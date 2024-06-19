@@ -4,18 +4,15 @@ import Download from "../components/Download.astro";
 import "../styles.css";
 
 type Props = {
-  frontmatter: {
-    title: string;
-    pdfLink: string;
-    noIndex?: boolean;
-    description?: string;
-  };
+  title: string;
+  pdfLink: string;
+  noIndex?: boolean;
+  description?: string;
 };
 
 const { PDF_VIEW, FORCE_THEME = "" } = import.meta.env;
 
-const { title, pdfLink, noIndex, description } = Astro.props
-  .frontmatter as Props["frontmatter"];
+const { title, pdfLink, noIndex, description } = Astro.props;
 
 // Firstname Lastname -> ['F', 'L']
 const initials = title
@@ -36,10 +33,10 @@ const initials = title
     <title>{title}</title>
   </head>
   <body class={!PDF_VIEW ? "bg-indigo-50 dark:bg-slate-900 sm:my-14" : ""}>
-    <div class="container mx-auto flex justify-center">
+    <main class="container mx-auto flex justify-center">
       <article class="minimalist relative">
         <div
-          class="absolute top-4 rounded-sm bg-indigo-400 px-4 py-1 sm:left-8 sm:top-12"
+          class="absolute top-4 rounded-sm bg-indigo-400 px-4 py-1 sm:left-12 sm:top-12"
         >
           <div
             class="flex h-fit select-none flex-col items-center text-sm font-bold"
@@ -56,7 +53,7 @@ const initials = title
         }
         <slot />
       </article>
-    </div>
+    </main>
     <style></style>
   </body>
 </html>
