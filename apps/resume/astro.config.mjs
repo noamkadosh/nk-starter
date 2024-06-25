@@ -1,15 +1,14 @@
 import { defineConfig } from "astro/config";
-
 import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
 import vercel from "@astrojs/vercel/serverless";
+import icon from "astro-icon";
+import mdx from "@astrojs/mdx";
 
 const { CI } = process.env;
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  integrations: [icon(), mdx(), tailwind()],
   vite: {
     ssr: {
       external: ["svgo"],

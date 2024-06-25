@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon/components";
+
+type Props = {
+  text: string;
+  href?: string;
+  icon: "github" | "globe" | "linkedin" | "location" | "mail" | "phone";
+};
+
+const { text, href, icon } = Astro.props;
+const styles = "flex items-center space-x-1";
+const Tag = href ? "a" : "span";
+
+const props = {
+  href: href,
+  class: styles,
+};
+---
+
+<Tag {...props}>
+  <Icon name={icon} class="inline" />
+  <p>{text}</p>
+</Tag>

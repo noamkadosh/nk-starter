@@ -2,15 +2,19 @@
 
 ### Reichman University (IDC Herzliya)
 
-#### Bachelor, Computer Science | Oct 2014 - Aug 2019
+**Bachelor, Computer Science | Oct 2014 - Aug 2019**
 
-#### Herzliya, Israel
+Some description...
+
+### Udemy Courses
+
+- React
 
 ## Certifications
 
 ### HarvardX
 
-#### Data Science Program | 2021
+**Data Science Program | 2021**
 
 Courses: R basics, data visualization, &
 data wrangling to machine learning

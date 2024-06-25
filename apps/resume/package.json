@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",
-    "@fontsource/poppins": "^5.0.14",
+    "@fontsource-variable/inter": "^5.0.18",
     "@playwright/test": "^1.44.1",
     "@tailwindcss/typography": "^0.5.13",
     "@types/node": "^20.14.2",
@@ -29,7 +29,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
+    "@astrojs/mdx": "^3.1.2",
     "@astrojs/vercel": "^7.7.0",
-    "astro": "4.10.2"
+    "astro": "4.10.2",
+    "astro-icon": "^1.1.0"
   }
 }

@@ -1,0 +1,30 @@
+---
+import LinkWithIcon from "./LinkWithIcon.astro";
+
+const styles = "flex items-center space-x-4";
+---
+
+<address class="not-italic">
+  <div class={styles}>
+    <LinkWithIcon icon="location" text="Los Angeles, CA" />
+    <LinkWithIcon
+      href="mailto:noamkadosh91@gmail.com"
+      icon="mail"
+      text="noamkadosh91@gmail.com"
+    />
+    <LinkWithIcon href="tel:+16467642326" icon="phone" text="+1 646 7642326" />
+  </div>
+  <div class={styles}>
+    <LinkWithIcon href="https://noamkadosh.com/" icon="globe" text="Website" />
+    <LinkWithIcon
+      href="https://github.com/noamkadosh/"
+      icon="github"
+      text="GitHub"
+    />
+    <LinkWithIcon
+      href="https://www.linkedin.com/in/noamkadosh/"
+      icon="linkedin"
+      text="LinkedIn"
+    />
+  </div>
+</address>
