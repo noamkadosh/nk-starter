@@ -9,7 +9,7 @@ type Props = {
 
 const { text, href, icon } = Astro.props;
 const styles = "flex items-center space-x-1";
-const Tag = href ? "a" : "span";
+const Tag = href ? "a" : "p";
 
 const props = {
   href: href,
@@ -19,5 +19,5 @@ const props = {
 
 <Tag {...props}>
   <Icon name={icon} class="inline" />
-  <p>{text}</p>
+  <span>{text}</span>
 </Tag>

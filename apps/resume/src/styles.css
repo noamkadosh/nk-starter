@@ -15,7 +15,7 @@ article.layout {
     prose-h2:mb-3 prose-h2:mt-4 prose-h2:text-2xl prose-h2:font-bold
     prose-h3:mb-3 prose-h3:mt-4 prose-h3:text-xl prose-h3:font-semibold
     prose-h4:mb-3 prose-h4:mt-4 prose-h4:text-sm prose-h4:text-slate-600 prose-h4:dark:text-slate-400
-    prose-p:my-2 prose-p:text-sm prose-p:leading-6
+    prose-p:my-2 prose-p:text-sm prose-p:leading-6 prose-p:text-white
     prose-a:font-normal prose-a:no-underline prose-a:transition-colors hover:prose-a:text-slate-400
     prose-li:text-sm
     prose-table:mt-4
@@ -25,4 +25,12 @@ article.layout {
     sm:px-12 sm:py-14
     lg:max-w-4xl
     dark:bg-slate-800 dark:prose-invert;
+}
+
+address {
+  @apply prose-a:text-sm
+}
+
+strong * {
+  @apply font-semibold !important
 }

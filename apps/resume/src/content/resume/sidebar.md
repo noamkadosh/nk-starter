@@ -1,8 +1,8 @@
 ## Education
 
-### Reichman University (IDC Herzliya)
+### Bachelor of Science in Computer Science
 
-**Bachelor, Computer Science | Oct 2014 - Aug 2019**
+**[Reichman University](https://www.runi.ac.il/en/) | Oct 2014 - Aug 2019**
 
 Some description...
 
@@ -12,9 +12,9 @@ Some description...
 
 ## Certifications
 
-### HarvardX
+### Data Science Program
 
-**Data Science Program | 2021**
+**[HarvardX on edX ](https://www.edx.org/certificates/professional-certificate/harvardx-data-science)| 2021**
 
 Courses: R basics, data visualization, &
 data wrangling to machine learning

@@ -1,12 +1,8 @@
-import LinkWithIcon from '../../components/LinkWithIcon.astro'
-
 ## Work Experience
 
 ### Senior Software Developer
 
-**Code Particle Inc. | Oct 2021 - Present**
-
-<LinkWithIcon href="https://codeparticle.com/" icon="globe" text="Website" />
+**[Code Particle Inc.](https://codeparticle.com/) | Oct 2021 - Present**
 
 Led the application’s expansion to more than 15 new locales, each supporting a different set of languages and reaching tens of thousands of users worldwide with support for additional payment options and accessibility features.
 
@@ -24,9 +20,7 @@ Led the application’s expansion to more than 15 new locales, each supporting a
 
 ### Front-End Developer
 
-**ILL | Oct 2016 - Aug 2018**
-
-<LinkWithIcon href="http://ill.co.il/" icon="globe" text="Website" />
+**[ILL](http://ill.co.il/) | Oct 2016 - Aug 2018**
 
 - Maintained and developed an Angular SPA, implementing data-focused components
   and functionality such as JWT authentication.
