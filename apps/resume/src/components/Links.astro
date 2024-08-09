@@ -1,16 +1,16 @@
 ---
 import LinkWithIcon from "./LinkWithIcon.astro";
 
-const styles = "flex items-center space-x-4";
+const styles = "flex justify-end items-center space-x-4 mb-2";
 ---
 
-<address class="not-italic">
+<address class="not-italic w-3/5">
   <div class={styles}>
     <LinkWithIcon icon="location" text="Los Angeles, CA" />
     <LinkWithIcon
       href="mailto:noamkadosh91@gmail.com"
       icon="mail"
-      text="noamkadosh91@gmail.com"
+      text="Email"
     />
     <LinkWithIcon href="tel:+16467642326" icon="phone" text="+1 646 7642326" />
   </div>

@@ -2,13 +2,14 @@
 import { Icon } from "astro-icon/components";
 
 type Props = {
-  text: string;
+  className?: string;
   href?: string;
   icon: "github" | "globe" | "linkedin" | "location" | "mail" | "phone";
+  text: string;
 };
 
-const { text, href, icon } = Astro.props;
-const styles = "flex items-center space-x-1";
+const { className = '', href, icon, text } = Astro.props;
+const styles = `${className} flex items-center space-x-1`;
 const Tag = href ? "a" : "p";
 
 const props = {
@@ -20,4 +21,11 @@ const props = {
 <Tag {...props}>
   <Icon name={icon} class="inline" />
   <span>{text}</span>
+  {
+    href && (
+      <span class="h-full">
+        <Icon name="external-link" class="inline-block h-3 w-3 align-top" />
+      </span>
+    )
+  }
 </Tag>
