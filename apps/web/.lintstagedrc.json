@@ -1,0 +1,8 @@
+{
+    "./**/*.{js,cjs,mjs,ts,jsx,tsx}": [
+        "prettier --write",
+        "eslint --resolve-plugins-relative-to='./'"
+    ],
+    "./**/*.{css,scss}": ["prettier --write"],
+    "./**/*.{json,md}": ["prettier --write"]
+}

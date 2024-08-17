@@ -40,6 +40,8 @@
         "@types/node": "^20.11.24",
         "@vitejs/plugin-react-swc": "^3.7.0",
         "eslint": "^8.57.0",
+        "lint-staged": "^15.2.9",
+        "prettier": "^3.2.5",
         "typescript": "^5.3.3",
         "vite": "^5.4.0",
         "vite-plugin-dts": "^4.0.3"
