@@ -45,15 +45,14 @@ The pdf is generated at build time, so no need to manually generated it.
 
 All commands are run from the root of the project, from a terminal:
 
-| Command             | Action                                             |
-| :------------------ | :------------------------------------------------- |
-| `pnpm install`              | Installs dependencies                              |
-| `pnpm dlx astro dev`          | Starts local dev server at `localhost:4321`        |
-| `pnpm dlx astro build`        | Build your production site to `./dist/`            |
-| `pnpm dlx astro build`      | Preview your build locally, before deploying       |
+| Command                 | Action                                             |
+| :---------------------- | :------------------------------------------------- |
+| `pnpm install`          | Installs dependencies                              |
+| `pnpm dlx astro dev`    | Starts local dev server at `localhost:4321`        |
+| `pnpm dlx astro build`  | Build your production site to `./dist/`            |
+| `pnpm dlx astro build`  | Preview your build locally, before deploying       |
 | `pnpm dlx astro ...`    | Run CLI commands like `astro add`, `astro preview` |
 | `pnpm dlx astro --help` | Get help using the Astro CLI                       |
-
 
 ## License
 

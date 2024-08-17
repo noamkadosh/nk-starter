@@ -12,7 +12,9 @@
     "prebuild": "astro check && tsc --noEmit",
     "build": "pnpm generate-pdf:ci && astro build",
     "build:light": "FORCE_THEME=light astro build",
-    "build:dark": "FORCE_THEME=dark astro build"
+    "build:dark": "FORCE_THEME=dark astro build",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",

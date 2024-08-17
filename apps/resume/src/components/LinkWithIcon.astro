@@ -8,7 +8,7 @@ type Props = {
   text: string;
 };
 
-const { className = '', href, icon, text } = Astro.props;
+const { className = "", href, icon, text } = Astro.props;
 const styles = `${className} flex items-center space-x-1`;
 const Tag = href ? "a" : "p";
 
