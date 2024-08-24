@@ -1,7 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
     extends: ["../../.eslintrc.js", "@turbo/eslint-config/react.cjs"],
-    ignorePatterns: [".eslintrc.cjs"],
     parser: "@typescript-eslint/parser",
     parserOptions: {
         project: "tsconfig.node.json",
