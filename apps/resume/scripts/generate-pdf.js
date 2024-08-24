@@ -1,20 +1,20 @@
-import { chromium } from "@playwright/test";
+import { chromium } from "@playwright/test"
 
 const main = async () => {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
+    const browser = await chromium.launch()
+    const page = await browser.newPage()
 
-  await page.goto("http://localhost:4321/", { waitUntil: "networkidle" });
+    await page.goto("http://localhost:4321/", { waitUntil: "networkidle" })
 
-  await page.emulateMedia({ media: "screen" });
+    await page.emulateMedia({ media: "screen" })
 
-  await page.pdf({
-    path: "public/resume.pdf",
-    margin: { top: "50px", bottom: "80px" },
-    printBackground: true,
-  });
+    await page.pdf({
+        margin: { bottom: "80px", top: "50px" },
+        path: "public/resume.pdf",
+        printBackground: true,
+    })
 
-  return browser.close();
-};
+    return browser.close()
+}
 
-main();
+main()

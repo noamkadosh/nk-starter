@@ -6,10 +6,12 @@
         "dev": "turbo dev",
         "type-check": "turbo type-check",
         "lint": "turbo lint",
-        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "format": "prettier --write .",
         "prepare": "husky"
     },
     "devDependencies": {
+        "@turbo/eslint-config": "workspace:*",
+        "@turbo/typescript-config": "workspace:*",
         "concurrently": "^8.2.2",
         "husky": "^9.1.4",
         "lint-staged": "^15.2.9",

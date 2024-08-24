@@ -1,14 +1,15 @@
-import { defineCollection, z } from "astro:content";
+// eslint-disable-next-line import/no-unresolved
+import { defineCollection, z } from "astro:content"
 
 const resumeCollection = defineCollection({
-  type: "content",
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    pdfLink: z.string(),
-  }),
-});
+    schema: z.object({
+        description: z.string(),
+        pdfLink: z.string(),
+        title: z.string(),
+    }),
+    type: "content",
+})
 
 export const collections = {
-  resume: resumeCollection,
-};
+    resume: resumeCollection,
+}

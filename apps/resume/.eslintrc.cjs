@@ -1,18 +1,16 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-    extends: ["../../.eslintrc.js", "@turbo/eslint-config/react.cjs"],
+    // extends: ["../../.eslintrc.cjs", "@turbo/eslint-config/astro.cjs"],
     ignorePatterns: [".eslintrc.cjs"],
     parser: "@typescript-eslint/parser",
     parserOptions: {
-        project: "tsconfig.node.json",
+        extraFileExtensions: [".astro", ".mdx"],
+        project: "tsconfig.json",
         tsconfigRootDir: __dirname,
     },
     settings: {
         "import/resolver": {
-            typescript: {
-                project: "tsconfig.node.json",
-                tsconfigRootDir: __dirname,
-            },
+            typescript: {},
         },
     },
 }

@@ -1,22 +1,20 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/serverless";
-import icon from "astro-icon";
-import mdx from "@astrojs/mdx";
+import { defineConfig } from "astro/config"
+import tailwind from "@astrojs/tailwind"
+import icon from "astro-icon"
+import mdx from "@astrojs/mdx"
 
-const { CI } = process.env;
+const { CI } = process.env
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [icon(), mdx(), tailwind()],
-  vite: {
-    ssr: {
-      external: ["svgo"],
+    devToolbar: {
+        enabled: !CI,
     },
-  },
-  output: "server",
-  adapter: vercel(),
-  devToolbar: {
-    enabled: !CI,
-  },
-});
+    integrations: [icon(), mdx(), tailwind()],
+    output: "server",
+    vite: {
+        ssr: {
+            external: ["svgo"],
+        },
+    },
+})

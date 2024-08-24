@@ -1,23 +1,28 @@
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react-swc"
 import dts from "vite-plugin-dts"
-import { resolve } from "node:path"
+import path from "node:path"
 
 export default defineConfig({
-    plugins: [
-        react(),
-        dts({
-            tsconfigPath: resolve(__dirname, "tsconfig.app.json"),
-        }),
-    ],
     build: {
         lib: {
-            entry: resolve(__dirname, "src/index.ts"),
-            formats: ["es", "cjs"],
+            entry: path.resolve(__dirname, "src/index.ts"),
             fileName: "index",
+            formats: ["es", "cjs"],
         },
         rollupOptions: {
             external: ["next", "react", "react-dom", "react/jsx-runtime"],
+        },
+    },
+    plugins: [
+        react(),
+        dts({
+            tsconfigPath: path.resolve(__dirname, "tsconfig.app.json"),
+        }),
+    ],
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "src"),
         },
     },
 })

@@ -3,10 +3,11 @@ module.exports = {
         browser: true,
         es2022: true,
     },
-    extends: ["plugin:@next/next/recommended"],
+    extends: ["plugin:jsx-a11y/recommended"],
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
         },
     },
+    plugins: ["jsx-a11y"],
 }

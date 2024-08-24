@@ -3,7 +3,7 @@ module.exports = {
         browser: true,
         es2022: true,
     },
-    extends: ["plugin:@next/next/recommended"],
+    extends: ["plugin:storybook/recommended"],
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
