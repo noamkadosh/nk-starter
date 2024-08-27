@@ -1,4 +1,4 @@
-name: Pr Checker
+name: PR Checker
 
 on: [pull_request]
 
@@ -7,45 +7,55 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v3
+            - name: Checkout
+              uses: actions/checkout@v4
 
-            - uses: actions/setup-node@v3
+            - uses: pnpm/action-setup@v4
+              name: Install pnpm
               with:
-                  node-version-file: ".nvmrc"
+                  version: 9.4.0
+                  run_install: false
 
-            - run: yarn install --frozen-lockfile
+            - name: Install Node.js
+              uses: actions/setup-node@v4
 
-            - run: yarn build
+            - name: Get pnpm store directory
+              shell: bash
+              run: |
+                  echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+            - uses: actions/cache@v4
+              name: Setup pnpm cache
+              with:
+                  path: ${{ env.STORE_PATH }}
+                  key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pnpm-store-
+
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
+
+            - name: Build
+              run: pnpm build
 
     visual-testing:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v3
+            - name: Checkout
+              uses: actions/checkout@v4
 
-            - uses: actions/setup-node@v3
+            - uses: pnpm/action-setup@v4
+              name: Install pnpm
               with:
-                  node-version-file: ".nvmrc"
+                  version: 9.4.0
+                  run_install: false
 
-            - run: yarn install --frozen-lockfile
-            - run: yarn add @percy/cli -D
+            - name: Install Node.js
+              uses: actions/setup-node@v4
 
-            - run: mkdir -p theme-dist/light && mkdir -p theme-dist/dark
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
 
-            - run: yarn build:light --base light
-              env:
-                  NOTION_API_KEY: ${{secrets.NOTION_API_KEY}}
-                  DATABASE_ID: ${{secrets.DATABASE_ID}}
-
-            - run: cp -R dist/* theme-dist/light
-
-            - run: yarn build:dark --base dark
-              env:
-                  NOTION_API_KEY: ${{secrets.NOTION_API_KEY}}
-                  DATABASE_ID: ${{secrets.DATABASE_ID}}
-
-            - run: cp -R dist/* theme-dist/dark
-
-            - run: npx percy snapshot theme-dist/
-              env:
-                  PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
+            - name: Build
+              run: pnpm build

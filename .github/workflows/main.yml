@@ -44,8 +44,8 @@ jobs:
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
 
-            - name: Build Resume
-              run: pnpm build --filter="@turbo/resume"
+            - name: Build
+              run: pnpm build
 
             - name: Download Resume
               uses: actions/upload-artifact@v4
