@@ -1,24 +1,27 @@
 ---
-import "@fontsource-variable/inter";
-import Download from "../components/Download.astro";
-import "../styles.css";
+import "@fontsource-variable/inter"
+import Download from "../components/Download.astro"
+import "../styles.css"
 
 type Props = {
-  title: string;
-  pdfLink: string;
-  noIndex?: boolean;
-  description?: string;
-};
+  frontmatter: {
+    title: string
+    pdfLink: string
+    noIndex?: boolean
+    description?: string
+  }
+}
 
-const { PDF_VIEW, FORCE_THEME = "" } = import.meta.env;
+const { FORCE_THEME, PDF_VIEW } = process.env
 
-const { title, pdfLink, noIndex, description } = Astro.props;
+const { title, pdfLink, noIndex, description } = Astro.props
+  .frontmatter as Props["frontmatter"]
 
 // Firstname Lastname -> ['F', 'L']
 const initials = title
   .split(" ")
   .map(([initial]) => initial!.toUpperCase())
-  .slice(0, 2);
+  .slice(0, 2)
 ---
 
 <!doctype html>
@@ -32,9 +35,9 @@ const initials = title
     {noIndex && <meta name="robots" content="noindex" />}
     <title>{title}</title>
   </head>
-  <body class={!PDF_VIEW ? "bg-indigo-50 dark:bg-slate-900 sm:my-14" : ""}>
+  <body class={PDF_VIEW ? "" : "bg-indigo-50 dark:bg-slate-900 sm:my-14"}>
     <main class="container mx-auto flex justify-center">
-      <article class="layout relative">
+      <article class={`layout relative${PDF_VIEW ? "" : " py-8 pt-20"}`}>
         <div
           class="absolute top-4 rounded-sm bg-indigo-400 px-4 py-1 sm:left-12 sm:top-12"
         >

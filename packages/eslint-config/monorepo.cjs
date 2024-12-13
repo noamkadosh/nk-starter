@@ -1,6 +1,6 @@
 module.exports = {
-    plugins: ["turbo"],
-    rules: {
-        "turbo/no-undeclared-env-vars": "error",
-    },
+  plugins: ["turbo"],
+  rules: {
+    "turbo/no-undeclared-env-vars": "error",
+  },
 }
