@@ -13,6 +13,7 @@
   "devDependencies": {
     "@nk/eslint-config": "workspace:*",
     "@nk/typescript-config": "workspace:*",
+    "browserslist": "^4.24.2",
     "concurrently": "^9.1.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",
