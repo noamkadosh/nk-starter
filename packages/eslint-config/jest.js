@@ -1,15 +1,27 @@
-  import jest from "eslint-plugin-jest"
+import jest from "eslint-plugin-jest"
 import jestDom from "eslint-plugin-jest-dom"
 
-export default [
-  {
-    files: ["**/{test,tests}/**/*.{test,spec}.{ts,tsx}"],
-    ...jest.configs["flat/recommended"],
-    ...jestDom.configs["flat/recommended"],
-    settings: {
-      jest: {
-        version: 27,
-      },
+const shared = {
+  files: ["**/{test,tests}/**/*.{test,spec}.{ts,tsx}"],
+  name: "jest",
+  settings: {
+    jest: {
+      version: 27,
     },
   },
-]
+}
+
+export default {
+  core: [
+    {
+      ...shared,
+      ...jest.configs["flat/recommended"],
+    },
+  ],
+  dom: [
+    {
+      ...shared,
+      ...jestDom.configs["flat/recommended"],
+    },
+  ],
+}

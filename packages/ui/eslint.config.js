@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import core from "@nk/eslint-config/core"
-import next from "@nk/eslint-config/next"
 import react from "@nk/eslint-config/react"
 import tailwind from "@nk/eslint-config/tailwind"
 
@@ -36,7 +35,6 @@ export default [
   ...react.hooks,
   ...react.compiler,
   ...react.import,
-  ...next.core,
   ...tailwind.core,
   {
     settings: {
@@ -46,7 +44,7 @@ export default [
     },
   },
   {
-    ignores: [".next"],
+    ignores: ["dist"],
   },
   ...core.prettier,
 ]

@@ -1,8 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import core from "@nk/eslint-config/core"
-import next from "@nk/eslint-config/next"
-import react from "@nk/eslint-config/react"
-import tailwind from "@nk/eslint-config/tailwind"
 
 /** @type {import("eslint").Linter.Config} */
 export default [
@@ -32,21 +29,6 @@ export default [
   ...core.promise,
   ...core.regex,
   ...core.jsdoc,
-  ...react.core,
-  ...react.hooks,
-  ...react.compiler,
-  ...react.import,
-  ...next.core,
-  ...tailwind.core,
-  {
-    settings: {
-      tailwindcss: {
-        config: `${import.meta.dirname}/tailwind.config.ts`,
-      },
-    },
-  },
-  {
-    ignores: [".next"],
-  },
+  ...core.markdown,
   ...core.prettier,
 ]

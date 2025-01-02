@@ -1,9 +1,6 @@
 import { chromium } from "@playwright/test"
 
 const main = async () => {
-  // Install browsers if needed
-  await installBrowsers()
-
   const browser = await chromium.launch()
   const page = await browser.newPage()
 
@@ -20,4 +17,4 @@ const main = async () => {
   return browser.close()
 }
 
-main()
+await main()

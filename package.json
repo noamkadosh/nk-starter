@@ -1,12 +1,13 @@
 {
   "name": "nk",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "type-check": "turbo type-check",
-    "lint": "turbo lint",
+    "type-check": "turbo type-check --continue",
+    "lint": "turbo lint --continue",
     "format": "prettier --write .",
     "prepare": "husky"
   },
@@ -15,6 +16,7 @@
     "@nk/typescript-config": "workspace:*",
     "browserslist": "^4.24.2",
     "concurrently": "^9.1.0",
+    "eslint": "^9.17.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",
     "prettier": "^3.4.2",

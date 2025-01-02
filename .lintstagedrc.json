@@ -1,5 +1,8 @@
 {
-  "./**/*.{js,cjs,mjs,ts,jsx,tsx,astro}": ["prettier --write", "eslint"],
+  "./**/*.{js,cjs,mjs,ts,jsx,tsx,astro}": [
+    "prettier --write",
+    "eslint --max-warnings 0 --flag unstable_config_lookup_from_file"
+  ],
   "./**/*.{css,scss}": ["prettier --write"],
   "./**/*.{json,md}": ["prettier --write"]
 }

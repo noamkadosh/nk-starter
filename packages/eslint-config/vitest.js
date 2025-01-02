@@ -1,8 +1,11 @@
 import vitest from "@vitest/eslint-plugin"
 
-export default [
-  {
-    files: ["**/{test,tests}/**/*.{test,spec}.{ts,tsx}"],
-    ...vitest.configs.recommended,
-  },
-]
+export default {
+  core: [
+    {
+      ...vitest.configs.recommended,
+      files: ["**/{test,tests}/**/*.{test,spec}.{ts,tsx}"],
+      name: "vitest",
+    },
+  ],
+}

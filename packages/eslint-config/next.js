@@ -4,4 +4,4 @@ const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
 })
 
-export default compat.extends("plugin:@next/next/recommended")
+export default { core: compat.extends("plugin:@next/next/recommended") }

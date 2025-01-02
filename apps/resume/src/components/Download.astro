@@ -3,7 +3,7 @@ type Props = {
   href: string
 }
 
-const { href } = Astro.props as Props
+const { href } = Astro.props
 ---
 
 <a
@@ -14,7 +14,7 @@ const { href } = Astro.props as Props
   aria-label="Download Resume"
 >
   <svg
-    class="h-6 w-6"
+    class="size-6"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"

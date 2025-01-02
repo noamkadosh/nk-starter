@@ -1,10 +1,13 @@
 import nodePlugin from "eslint-plugin-n"
 
-export default [
-  nodePlugin.configs["flat/recommended-script"],
-  {
-    rules: {
-      "n/exports-style": ["error", "module.exports"],
+export default {
+  core: [
+    {
+      ...nodePlugin.configs["flat/recommended-script"],
+      name: "node",
+      rules: {
+        "n/exports-style": ["error", "module.exports"],
+      },
     },
-  },
-]
+  ],
+}

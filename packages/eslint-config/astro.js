@@ -1,6 +1,11 @@
 import eslintPluginAstro from "eslint-plugin-astro"
 
-export default [
-  ...eslintPluginAstro.configs.recommended,
-  ...eslintPluginAstro.configs["jsx-a11y-recommended"],
-]
+export default {
+  core: [
+    ...eslintPluginAstro.configs.recommended,
+    {
+      ignores: [".astro"],
+    },
+  ],
+  a11y: eslintPluginAstro.configs["jsx-a11y-recommended"],
+}

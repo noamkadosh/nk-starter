@@ -1,18 +1,42 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import astro from "@nk/eslint-config/astro"
+import core from "@nk/eslint-config/core"
+import tailwind from "@nk/eslint-config/tailwind"
+
 /** @type {import("eslint").Linter.Config} */
-module.exports = {
-  // extends: ["../../.eslintrc.cjs", "@turbo/eslint-config/astro.cjs"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    extraFileExtensions: [".astro", ".mdx"],
-    project: "tsconfig.json",
-    tsconfigRootDir: __dirname,
-  },
-  settings: {
-    "import/resolver": {
-      typescript: {
-        project: "tsconfig.json",
-        tsconfigRootDir: __dirname,
+export default [
+  {
+    languageOptions: {
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+    settings: {
+      "import/resolver": {
+        typescript: {
+          alwaysTryTypes: true,
+          project: `${import.meta.dirname}/tsconfig.json`,
+        },
       },
     },
   },
-}
+  ...core.typescript,
+  ...core.importTypescript,
+  ...core.sonarjs,
+  ...core.unicorn,
+  ...core.promise,
+  ...core.regex,
+  ...core.jsdoc,
+  ...astro.core,
+  ...astro.a11y,
+  ...tailwind.core,
+  {
+    settings: {
+      tailwindcss: {
+        config: `${import.meta.dirname}/tailwind.config.ts`,
+      },
+    },
+  },
+  ...core.prettier,
+]
