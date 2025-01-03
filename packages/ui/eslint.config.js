@@ -3,8 +3,11 @@ import core from "@nk/eslint-config/core"
 import react from "@nk/eslint-config/react"
 import tailwind from "@nk/eslint-config/tailwind"
 
+import { base } from "../../eslint.config.js"
+
 /** @type {import("eslint").Linter.Config} */
 export default [
+  ...base,
   {
     languageOptions: {
       parserOptions: {
@@ -24,13 +27,6 @@ export default [
       },
     },
   },
-  ...core.typescript,
-  ...core.importTypescript,
-  ...core.sonarjs,
-  ...core.unicorn,
-  ...core.promise,
-  ...core.regex,
-  ...core.jsdoc,
   ...react.core,
   ...react.hooks,
   ...react.compiler,

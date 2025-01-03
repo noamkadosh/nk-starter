@@ -1,5 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import core from "@nk/eslint-config/core"
+import monorepo from "@nk/eslint-config/monorepo"
+
+export const base = [
+  ...core.typescript,
+  ...core.importTypescript,
+  ...core.sonarjs,
+  ...core.unicorn,
+  ...core.promise,
+  ...core.regex,
+  ...core.jsdoc,
+  ...core.markdown,
+  ...monorepo.turbo,
+]
 
 /** @type {import("eslint").Linter.Config} */
 export default [
@@ -22,13 +35,6 @@ export default [
       },
     },
   },
-  ...core.typescript,
-  ...core.importTypescript,
-  ...core.sonarjs,
-  ...core.unicorn,
-  ...core.promise,
-  ...core.regex,
-  ...core.jsdoc,
-  ...core.markdown,
+  ...base,
   ...core.prettier,
 ]

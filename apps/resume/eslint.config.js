@@ -3,8 +3,11 @@ import astro from "@nk/eslint-config/astro"
 import core from "@nk/eslint-config/core"
 import tailwind from "@nk/eslint-config/tailwind"
 
+import { base } from "../../eslint.config.js"
+
 /** @type {import("eslint").Linter.Config} */
 export default [
+  ...base,
   {
     languageOptions: {
       parserOptions: {
@@ -21,13 +24,6 @@ export default [
       },
     },
   },
-  ...core.typescript,
-  ...core.importTypescript,
-  ...core.sonarjs,
-  ...core.unicorn,
-  ...core.promise,
-  ...core.regex,
-  ...core.jsdoc,
   ...astro.core,
   ...astro.a11y,
   ...tailwind.core,
