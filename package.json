@@ -4,12 +4,13 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "turbo build",
+    "build": "turbo build --continue",
     "dev": "turbo dev",
     "type-check": "turbo type-check --continue",
     "lint": "turbo lint --continue",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate:resume": "turbo generate:resume --filter=\"@nk/resume\""
   },
   "devDependencies": {
     "@nk/eslint-config": "workspace:*",

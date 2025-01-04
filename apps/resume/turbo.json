@@ -3,7 +3,12 @@
   "extends": ["//"],
   "tasks": {
     "build": {
+      "env": ["THEME", "FORCE_THEME", "PDF_VIEW"],
       "outputs": [".astro/**"]
+    },
+    "generate:resume": {
+      "env": ["THEME", "FORCE_THEME", "PDF_VIEW"],
+      "outputs": ["public/resume.pdf"]
     }
   }
 }

@@ -3,8 +3,8 @@ import type { PlopTypes } from "@turbo/gen"
 // Learn more about Turborepo Generators at https://turbo.build/repo/docs/core-concepts/monorepos/code-generation
 
 /**
- *
- * @param plop
+ * A generator to create a new React component.
+ * @param plop - The Plop API.
  */
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
   // A simple generator to add a new React component to the internal UI library

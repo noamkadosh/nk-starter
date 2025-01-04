@@ -6,7 +6,6 @@ import tailwind from "@nk/eslint-config/tailwind"
 
 import { base } from "../../eslint.config.js"
 
-/** @type {import("eslint").Linter.Config} */
 export default [
   ...base,
   {

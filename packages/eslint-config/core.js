@@ -65,7 +65,15 @@ export default {
     },
   ],
   javascript: [{ ...js.configs.recommended, name: "javascript" }],
-  jsdoc: [{ ...jsdoc.configs["flat/recommended"], name: "jsdoc" }],
+  jsdocJavascript: [
+    { ...jsdoc.configs["flat/recommended"], name: "jsdocJavascript" },
+  ],
+  jsdocTypescript: [
+    {
+      ...jsdoc.configs["flat/recommended-typescript"],
+      name: "jsdocTypscript",
+    },
+  ],
   markdown: markdown.configs.recommended,
   prettier: [{ ...prettier, name: "prettier" }],
   promise: [{ ...promise.configs["flat/recommended"], name: "promise" }],

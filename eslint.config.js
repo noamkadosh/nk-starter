@@ -9,12 +9,11 @@ export const base = [
   ...core.unicorn,
   ...core.promise,
   ...core.regex,
-  ...core.jsdoc,
+  ...core.jsdocTypescript,
   ...core.markdown,
   ...monorepo.turbo,
 ]
 
-/** @type {import("eslint").Linter.Config} */
 export default [
   {
     languageOptions: {

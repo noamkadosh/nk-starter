@@ -4,7 +4,7 @@ export default {
   core: [
     ...eslintPluginAstro.configs.recommended,
     {
-      ignores: [".astro"],
+      ignores: [".astro", "dist"],
     },
   ],
   a11y: eslintPluginAstro.configs["jsx-a11y-recommended"],
