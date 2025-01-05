@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import astro from "@nk/eslint-config/astro"
 import core from "@nk/eslint-config/core"
+import jsx from "@nk/eslint-config/jsx"
 import tailwind from "@nk/eslint-config/tailwind"
 
 import { base } from "../../eslint.config.js"
@@ -10,7 +11,10 @@ export default [
   {
     languageOptions: {
       parserOptions: {
-        project: true,
+        projectService: {
+          allowDefaultProject: [],
+          defaultProject: "tsconfig.json",
+        },
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -25,6 +29,7 @@ export default [
   },
   ...astro.core,
   ...astro.a11y,
+  ...jsx.a11y,
   ...tailwind.core,
   {
     settings: {
@@ -32,6 +37,9 @@ export default [
         config: `${import.meta.dirname}/tailwind.config.ts`,
       },
     },
+  },
+  {
+    ignores: [".astro", "dist"],
   },
   ...core.prettier,
 ]

@@ -1,0 +1,4 @@
+{
+  "extends": "@nk/typescript-config/base.json",
+  "include": [".storybook/main.ts", ".storybook/preview.ts"]
+}

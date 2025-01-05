@@ -2,6 +2,8 @@
 import core from "@nk/eslint-config/core"
 import next from "@nk/eslint-config/next"
 import react from "@nk/eslint-config/react"
+import jsx from "@nk/eslint-config/jsx"
+import storybook from "@nk/eslint-config/storybook"
 import tailwind from "@nk/eslint-config/tailwind"
 
 import { base } from "../../eslint.config.js"
@@ -12,7 +14,7 @@ export default [
     languageOptions: {
       parserOptions: {
         projectService: {
-          allowDefaultProject: ["*.js", "*.mjs"],
+          allowDefaultProject: ["*.mjs"],
           defaultProject: "tsconfig.json",
         },
         tsconfigRootDir: import.meta.dirname,
@@ -31,6 +33,7 @@ export default [
   ...react.hooks,
   ...react.compiler,
   ...react.import,
+  ...jsx.a11y,
   ...next.core,
   ...tailwind.core,
   {
@@ -43,5 +46,6 @@ export default [
   {
     ignores: [".next"],
   },
+  ...storybook.core,
   ...core.prettier,
 ]

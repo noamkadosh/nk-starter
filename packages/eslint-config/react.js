@@ -27,6 +27,12 @@ export default {
         "react/jsx-sort-props": "error",
         "react/react-in-jsx-scope": "off",
       },
+      settings: {
+        react: {
+          version: "detect",
+          defaultVersion: "19",
+        },
+      },
     },
   ],
   compiler: compat.plugins("react-compiler"),

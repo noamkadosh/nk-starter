@@ -3,6 +3,12 @@
   "extends": ["//"],
   "tasks": {
     "build": {
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env",
+        ".env.*",
+        "!**/*.stories.{tsx,jsx,mdx}"
+      ],
       "outputs": ["dist"]
     }
   }

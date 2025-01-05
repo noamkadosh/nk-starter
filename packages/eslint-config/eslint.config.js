@@ -16,6 +16,7 @@ export default [
   ...core.promise,
   ...core.regex,
   ...core.jsdocJavascript,
+  ...core.json,
   ...core.markdown,
   ...core.prettier,
 ]

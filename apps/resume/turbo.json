@@ -4,6 +4,12 @@
   "tasks": {
     "build": {
       "env": ["THEME", "FORCE_THEME", "PDF_VIEW"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env",
+        ".env.*",
+        "!**/*.stories.{tsx,jsx,mdx}"
+      ],
       "outputs": [".astro/**"]
     },
     "generate:resume": {

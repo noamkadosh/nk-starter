@@ -5,6 +5,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "type-check": "tsc --noEmit",
     "lint": "next lint --max-warnings 0"
   },
   "dependencies": {

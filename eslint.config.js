@@ -10,16 +10,18 @@ export const base = [
   ...core.promise,
   ...core.regex,
   ...core.jsdocTypescript,
+  ...core.json,
   ...core.markdown,
   ...monorepo.turbo,
 ]
 
 export default [
+  ...base,
   {
     languageOptions: {
       parserOptions: {
         projectService: {
-          allowDefaultProject: ["*.js", "*.mjs"],
+          allowDefaultProject: ["*.js"],
           defaultProject: "tsconfig.json",
         },
         tsconfigRootDir: import.meta.dirname,
@@ -34,6 +36,5 @@ export default [
       },
     },
   },
-  ...base,
   ...core.prettier,
 ]

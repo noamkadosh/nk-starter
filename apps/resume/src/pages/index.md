@@ -7,7 +7,7 @@ pdfLink: resume.pdf
 
 # Noam Kadosh
 
-### **Software Engineer | Full-Stack Software Engineer**
+## **Software Engineer | Full-Stack Software Engineer**
 
 [(646)-764-2326](tel:6467642326) |
 [noamkadosh91@gmail.com](mailto:noamkadosh91@gmail.com) |
