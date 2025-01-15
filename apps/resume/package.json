@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "postinstall": "npx playwright install",
+    "postinstall": "npx playwright install chromium",
     "dev": "astro dev",
     "start": "astro dev",
     "generate:pdf": "node ./scripts/generate-pdf.js",
