@@ -1,4 +1,9 @@
 {
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
   "extends": "@nk/typescript-config/base.json",
   "exclude": ["node_modules"]
 }

@@ -31,7 +31,7 @@ const importOrder = [
         position: "before",
       },
       {
-        pattern: "@/**",
+        pattern: "@*/**",
         group: "internal",
         position: "after",
       },
