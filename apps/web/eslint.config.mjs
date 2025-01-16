@@ -31,7 +31,6 @@ export default [
   },
   ...react.core,
   ...react.hooks,
-  ...react.compiler,
   ...react.import,
   ...jsx.a11y,
   ...next.core,

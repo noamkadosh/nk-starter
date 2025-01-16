@@ -13,16 +13,30 @@ function getAbsolutePath(value: string) {
 }
 
 const config: StorybookConfig = {
-  stories: ["../../../**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)"],
+  stories: [
+    "../../../apps/**/src/**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)",
+    "../../../packages/**/src/**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)",
+  ],
   addons: [
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@chromatic-com/storybook"),
     getAbsolutePath("@storybook/addon-interactions"),
+    getAbsolutePath("@storybook/addon-a11y"),
   ],
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
+  viteFinal: async (config) => {
+    const { mergeConfig } = await import("vite")
+    const { default: react } = await import("@vitejs/plugin-react-swc")
+    const { default: tsConfigPaths } = await import("vite-tsconfig-paths")
+
+    return mergeConfig(config, {
+      plugins: [react(), tsConfigPaths()],
+    })
+  },
 }
+
 export default config

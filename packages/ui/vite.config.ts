@@ -2,6 +2,7 @@ import path from "node:path"
 import { fileURLToPath } from "node:url"
 
 import react from "@vitejs/plugin-react-swc"
+import tsConfigPaths from "vite-tsconfig-paths"
 import { globSync } from "glob"
 import { defineConfig } from "vite"
 import dts from "vite-plugin-dts"
@@ -40,14 +41,10 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    tsConfigPaths(),
     dts({
       tsconfigPath: path.resolve(__dirname, "tsconfig.app.json"),
       exclude: ["**/*.{test,stories}.*"],
     }),
   ],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
-    },
-  },
 })
