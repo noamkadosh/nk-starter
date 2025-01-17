@@ -9,8 +9,7 @@
     "type-check": "turbo type-check --continue",
     "lint": "turbo lint --continue",
     "format": "prettier --write .",
-    "prepare": "husky",
-    "generate:resume": "turbo generate:resume --filter=\"@nk/resume\""
+    "prepare": "husky"
   },
   "devDependencies": {
     "@nk/eslint-config": "workspace:*",
