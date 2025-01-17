@@ -6,9 +6,16 @@
     "*.js"
   ],
   "exports": {
-    "./*": "./*.js",
-    ".": "./index.js"
+    "./*": {
+      "import": "./*.js",
+      "types": "./*.d.ts"
+    },
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    }
   },
+  "types": "index.d.ts",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "format": "prettier --write ."

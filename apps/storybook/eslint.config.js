@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import core from "@nk/eslint-config/core"
 import storybook from "@nk/eslint-config/storybook"
 
@@ -13,7 +12,7 @@ export default [
           allowDefaultProject: ["*.js"],
           defaultProject: "tsconfig.json",
         },
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: `${import.meta.dirname}`,
       },
     },
     settings: {
@@ -26,5 +25,8 @@ export default [
     },
   },
   ...storybook.core,
+  {
+    ignores: ["storybook-static"],
+  },
   ...core.prettier,
 ]

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import core from "@nk/eslint-config/core"
 import monorepo from "@nk/eslint-config/monorepo"
 

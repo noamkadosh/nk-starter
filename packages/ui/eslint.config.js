@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import core from "@nk/eslint-config/core"
 import react from "@nk/eslint-config/react"
 import jsx from "@nk/eslint-config/jsx"

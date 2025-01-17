@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import astro from "@nk/eslint-config/astro"
 import core from "@nk/eslint-config/core"
 import jsx from "@nk/eslint-config/jsx"

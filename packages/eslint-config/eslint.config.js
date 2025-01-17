@@ -2,7 +2,6 @@ import parser from "@typescript-eslint/parser"
 
 import core from "./core.js"
 
-/** @type {import("eslint").Linter.Config} */
 export default [
   {
     languageOptions: {
@@ -18,5 +17,8 @@ export default [
   ...core.jsdocJavascript,
   ...core.json,
   ...core.markdown,
+  {
+    ignores: ["*.d.ts"],
+  },
   ...core.prettier,
 ]
