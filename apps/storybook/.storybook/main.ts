@@ -1,6 +1,6 @@
-import path from "node:path"
+import path from "node:path";
 
-import type { StorybookConfig } from "@storybook/react-vite"
+import type { StorybookConfig } from "@storybook/react-vite";
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -9,7 +9,7 @@ import type { StorybookConfig } from "@storybook/react-vite"
  * @returns - The absolute path of the package.
  */
 function getAbsolutePath(value: string) {
-  return path.dirname(require.resolve(path.join(value, "package.json")))
+  return path.dirname(require.resolve(path.join(value, "package.json")));
 }
 
 const config: StorybookConfig = {
@@ -29,14 +29,14 @@ const config: StorybookConfig = {
     options: {},
   },
   viteFinal: async (config) => {
-    const { mergeConfig } = await import("vite")
-    const { default: react } = await import("@vitejs/plugin-react-swc")
-    const { default: tsConfigPaths } = await import("vite-tsconfig-paths")
+    const { mergeConfig } = await import("vite");
+    const { default: react } = await import("@vitejs/plugin-react-swc");
+    const { default: tsConfigPaths } = await import("vite-tsconfig-paths");
 
     return mergeConfig(config, {
       plugins: [react(), tsConfigPaths()],
-    })
+    });
   },
-}
+};
 
-export default config
+export default config;

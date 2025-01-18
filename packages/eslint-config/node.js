@@ -1,4 +1,4 @@
-import nodePlugin from "eslint-plugin-n"
+import nodePlugin from "eslint-plugin-n";
 
 export default {
   core: [
@@ -10,4 +10,4 @@ export default {
       },
     },
   ],
-}
+};

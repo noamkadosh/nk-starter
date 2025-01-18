@@ -1,10 +1,10 @@
-import type { Linter } from "eslint"
+import type { Linter } from "eslint";
 
 type Monorepo = {
-  turbo: Linter.FlatConfig[]
-}
+  turbo: Linter.FlatConfig[];
+};
 
 declare module "@nk/eslint-config/monorepo" {
-  const monorepo: Monorepo
-  export default monorepo
+  const monorepo: Monorepo;
+  export default monorepo;
 }

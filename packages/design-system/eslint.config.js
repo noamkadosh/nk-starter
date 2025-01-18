@@ -1,10 +1,10 @@
-import core from "@nk/eslint-config/core"
-import react from "@nk/eslint-config/react"
-import jsx from "@nk/eslint-config/jsx"
-import storybook from "@nk/eslint-config/storybook"
-import tailwind from "@nk/eslint-config/tailwind"
+import core from "@nk/eslint-config/core";
+import react from "@nk/eslint-config/react";
+import jsx from "@nk/eslint-config/jsx";
+import storybook from "@nk/eslint-config/storybook";
+import tailwind from "@nk/eslint-config/tailwind";
 
-import { base } from "../../eslint.config.js"
+import { base } from "../../eslint.config.js";
 
 export default [
   ...base,
@@ -45,4 +45,4 @@ export default [
   },
   ...storybook.core,
   ...core.prettier,
-]
+];

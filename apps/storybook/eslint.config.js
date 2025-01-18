@@ -1,7 +1,7 @@
-import core from "@nk/eslint-config/core"
-import storybook from "@nk/eslint-config/storybook"
+import core from "@nk/eslint-config/core";
+import storybook from "@nk/eslint-config/storybook";
 
-import { base } from "../../eslint.config.js"
+import { base } from "../../eslint.config.js";
 
 export default [
   ...base,
@@ -29,4 +29,4 @@ export default [
     ignores: ["storybook-static"],
   },
   ...core.prettier,
-]
+];

@@ -1,6 +1,6 @@
-import parser from "@typescript-eslint/parser"
+import parser from "@typescript-eslint/parser";
 
-import core from "./core.js"
+import core from "./core.js";
 
 export default [
   {
@@ -21,4 +21,4 @@ export default [
     ignores: ["*.d.ts"],
   },
   ...core.prettier,
-]
+];

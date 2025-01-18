@@ -1,4 +1,4 @@
-import testingLibrary from "eslint-plugin-testing-library"
+import testingLibrary from "eslint-plugin-testing-library";
 
 export default {
   core: [
@@ -8,4 +8,4 @@ export default {
       name: "testing-library",
     },
   ],
-}
+};

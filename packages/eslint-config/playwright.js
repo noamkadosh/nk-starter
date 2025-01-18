@@ -1,4 +1,4 @@
-import playwright from "eslint-plugin-playwright"
+import playwright from "eslint-plugin-playwright";
 
 export default {
   core: [
@@ -8,4 +8,4 @@ export default {
       name: "playwright",
     },
   ],
-}
+};

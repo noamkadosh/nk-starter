@@ -1,15 +1,15 @@
-import js from "@eslint/js"
-import json from "@eslint/json"
-import markdown from "@eslint/markdown"
-import prettier from "eslint-config-prettier"
-import importPlugin from "eslint-plugin-import"
-import jsdoc from "eslint-plugin-jsdoc"
-import promise from "eslint-plugin-promise"
-import regexp from "eslint-plugin-regexp"
-import sonarjs from "eslint-plugin-sonarjs"
-import unicorn from "eslint-plugin-unicorn"
-import globals from "globals"
-import ts from "typescript-eslint"
+import js from "@eslint/js";
+import json from "@eslint/json";
+import markdown from "@eslint/markdown";
+import prettier from "eslint-config-prettier";
+import importPlugin from "eslint-plugin-import";
+import jsdoc from "eslint-plugin-jsdoc";
+import promise from "eslint-plugin-promise";
+import regexp from "eslint-plugin-regexp";
+import sonarjs from "eslint-plugin-sonarjs";
+import unicorn from "eslint-plugin-unicorn";
+import globals from "globals";
+import ts from "typescript-eslint";
 
 const importOrder = [
   "error",
@@ -43,7 +43,7 @@ const importOrder = [
       caseInsensitive: true,
     },
   },
-]
+];
 
 export default {
   importJavascript: [
@@ -158,4 +158,4 @@ export default {
       },
     },
   ],
-}
+};

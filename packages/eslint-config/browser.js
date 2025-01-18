@@ -1,9 +1,9 @@
-import htmlEslint from "@html-eslint/eslint-plugin"
-import compat from "eslint-plugin-compat"
-import escompat from "eslint-plugin-escompat"
-import eslintHtml from "eslint-plugin-html"
-import nounsanitized from "eslint-plugin-no-unsanitized"
-import globals from "globals"
+import htmlEslint from "@html-eslint/eslint-plugin";
+import compat from "eslint-plugin-compat";
+import escompat from "eslint-plugin-escompat";
+import eslintHtml from "eslint-plugin-html";
+import nounsanitized from "eslint-plugin-no-unsanitized";
+import globals from "globals";
 
 export default {
   nounsanitized: nounsanitized.configs.recommended,
@@ -33,4 +33,4 @@ export default {
       name: "html-eslint",
     },
   ],
-}
+};

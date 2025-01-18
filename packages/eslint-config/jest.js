@@ -1,5 +1,5 @@
-import jest from "eslint-plugin-jest"
-import jestDom from "eslint-plugin-jest-dom"
+import jest from "eslint-plugin-jest";
+import jestDom from "eslint-plugin-jest-dom";
 
 const shared = {
   files: ["**/{test,tests}/**/*.{test,spec}.{ts,tsx}"],
@@ -9,7 +9,7 @@ const shared = {
       version: 27,
     },
   },
-}
+};
 
 export default {
   core: [
@@ -24,4 +24,4 @@ export default {
       ...jestDom.configs["flat/recommended"],
     },
   ],
-}
+};

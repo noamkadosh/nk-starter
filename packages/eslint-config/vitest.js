@@ -1,4 +1,4 @@
-import vitest from "@vitest/eslint-plugin"
+import vitest from "@vitest/eslint-plugin";
 
 export default {
   core: [
@@ -8,4 +8,4 @@ export default {
       name: "vitest",
     },
   ],
-}
+};

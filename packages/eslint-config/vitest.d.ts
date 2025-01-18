@@ -1,10 +1,10 @@
-import type { Linter } from "eslint"
+import type { Linter } from "eslint";
 
 type Vitest = {
-  core: Linter.FlatConfig[]
-}
+  core: Linter.FlatConfig[];
+};
 
 declare module "@nk/eslint-config/vitest" {
-  const vitest: Vitest
-  export default vitest
+  const vitest: Vitest;
+  export default vitest;
 }

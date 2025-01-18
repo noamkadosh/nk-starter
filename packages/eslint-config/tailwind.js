@@ -1,3 +1,3 @@
-import tailwind from "eslint-plugin-tailwindcss"
+import tailwind from "eslint-plugin-tailwindcss";
 
-export default { core: tailwind.configs["flat/recommended"] }
+export default { core: tailwind.configs["flat/recommended"] };

@@ -1,4 +1,4 @@
-import eslintPluginAstro from "eslint-plugin-astro"
+import eslintPluginAstro from "eslint-plugin-astro";
 
 export default {
   core: [
@@ -15,4 +15,4 @@ export default {
       ignores: [".astro", "dist"],
     })),
   ],
-}
+};

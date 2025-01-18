@@ -1,5 +1,5 @@
-import core from "@nk/eslint-config/core"
-import monorepo from "@nk/eslint-config/monorepo"
+import core from "@nk/eslint-config/core";
+import monorepo from "@nk/eslint-config/monorepo";
 
 export const base = [
   ...core.typescript,
@@ -12,7 +12,7 @@ export const base = [
   ...core.json,
   ...core.markdown,
   ...monorepo.turbo,
-]
+];
 
 export default [
   ...base,
@@ -36,4 +36,4 @@ export default [
     },
   },
   ...core.prettier,
-]
+];

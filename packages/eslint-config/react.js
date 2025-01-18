@@ -1,12 +1,12 @@
-import { FlatCompat } from "@eslint/eslintrc"
-import pluginQuery from "@tanstack/eslint-plugin-query"
-import importPlugin from "eslint-plugin-import"
-import reactPlugin from "eslint-plugin-react"
-import globals from "globals"
+import { FlatCompat } from "@eslint/eslintrc";
+import pluginQuery from "@tanstack/eslint-plugin-query";
+import importPlugin from "eslint-plugin-import";
+import reactPlugin from "eslint-plugin-react";
+import globals from "globals";
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
-})
+});
 
 export default {
   core: [
@@ -39,4 +39,4 @@ export default {
   hooks: compat.extends("plugin:react-hooks/recommended"),
   query: pluginQuery.configs["flat/recommended"],
   import: [importPlugin.flatConfigs.recommended],
-}
+};

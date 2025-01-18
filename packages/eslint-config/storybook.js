@@ -1,4 +1,4 @@
-import storybook from "eslint-plugin-storybook"
+import storybook from "eslint-plugin-storybook";
 
 export default {
   core: [
@@ -9,4 +9,4 @@ export default {
       name: "storybook",
     })),
   ],
-}
+};

@@ -1,10 +1,10 @@
-import type { Linter } from "eslint"
+import type { Linter } from "eslint";
 
 type Playwright = {
-  core: Linter.FlatConfig[]
-}
+  core: Linter.FlatConfig[];
+};
 
 declare module "@nk/eslint-config/playwright" {
-  const playwright: Playwright
-  export default playwright
+  const playwright: Playwright;
+  export default playwright;
 }

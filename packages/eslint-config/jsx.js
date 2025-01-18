@@ -1,5 +1,5 @@
-import jsxA11y from "eslint-plugin-jsx-a11y"
-import globals from "globals"
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import globals from "globals";
 
 export default {
   a11y: [
@@ -16,4 +16,4 @@ export default {
       name: "jsx-a11y",
     },
   ],
-}
+};

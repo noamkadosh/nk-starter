@@ -1,10 +1,10 @@
-import type { Linter } from "eslint"
+import type { Linter } from "eslint";
 
 type Node = {
-  core: Linter.FlatConfig[]
-}
+  core: Linter.FlatConfig[];
+};
 
 declare module "@nk/eslint-config/node" {
-  const node: Node
-  export default node
+  const node: Node;
+  export default node;
 }
