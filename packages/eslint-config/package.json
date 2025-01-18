@@ -27,7 +27,7 @@
     "@eslint/markdown": "^6.2.1",
     "@html-eslint/eslint-plugin": "^0.32.0",
     "@html-eslint/parser": "^0.32.0",
-    "@next/eslint-plugin-next": "^15.1.0",
+    "@next/eslint-plugin-next": "^15.1.5",
     "@tanstack/eslint-plugin-query": "^5.62.1",
     "@types/node": "^22.10.2",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
