@@ -9,7 +9,7 @@
     "lint": "next lint --max-warnings 0"
   },
   "dependencies": {
-    "@nk/ui": "workspace:*",
+    "@nk/design-system": "workspace:*",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
