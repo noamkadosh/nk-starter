@@ -49,4 +49,10 @@ next-env.d.ts
 *storybook.log
 storybook-static
 
+# payload
 /media
+
+# fumadocs
+.contentlayer
+.content-collections
+.source
