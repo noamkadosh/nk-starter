@@ -87,18 +87,3 @@ jobs:
 
       - name: Build
         run: pnpm build
-
-  download-resume:
-    name: Download Resume
-    needs: Build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Download Resume
-        uses: actions/upload-artifact@v4
-        with:
-          name: Resume
-          path: apps/resume/public/resume.pdf
