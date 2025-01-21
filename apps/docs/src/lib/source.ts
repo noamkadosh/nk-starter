@@ -1,4 +1,4 @@
-import { docs, meta } from "@docs/../.source";
+import { docs, meta } from "@docs/source";
 import { createMDXSource } from "fumadocs-mdx";
 import { loader } from "fumadocs-core/source";
 
