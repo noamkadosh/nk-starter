@@ -1,67 +1,37 @@
 name: PR Checker
-
 on: [pull_request]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
+      - uses: oven-sh/setup-bun@v2
+        name: Install Bun
         with:
-          version: 9.4.0
-          run_install: false
-
+          bun-version: 1.1.45
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22.13.0
-          cache: "pnpm"
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
+        run: bun install --frozen-lockfile
       - name: Build
-        run: pnpm build
-
+        run: bun run build
   visual-testing:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
+      - uses: oven-sh/setup-bun@v2
+        name: Install Bun
         with:
-          version: 9.4.0
-          run_install: false
-
+          bun-version: 1.1.45
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22.13.0
-          cache: "pnpm"
-
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
+        run: bun install --frozen-lockfile
       - name: Build
-        run: pnpm build
+        run: bun run build
