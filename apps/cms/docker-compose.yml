@@ -8,7 +8,7 @@ services:
       - .:/home/node/app
       - node_modules:/home/node/app/node_modules
     working_dir: /home/node/app/
-    command: sh -c "apt update && apt install -y bash curl unzip && curl https://bun.sh/install | bash -s -- bun-v1.1.45 && bun install && bun run dev"
+    command: sh -c "apt update && apt install -y bash curl unzip && curl https://bun.sh/install | bash -s -- bun-v1.2.0 && bun install && bun run dev"
     depends_on:
       - postgres
     env_file:

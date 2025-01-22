@@ -35,10 +35,10 @@
     "apps/*",
     "packages/*"
   ],
-  "packageManager": "bun@1.1.45",
+  "packageManager": "bun@1.2.0",
   "engines": {
     "node": "22.13.0",
-    "bun": "1.1.45"
+    "bun": "1.2.0"
   },
   "volta": {
     "node": "22.13.0"

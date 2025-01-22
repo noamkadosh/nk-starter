@@ -9,33 +9,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-        name: Install Bun
-        with:
-          bun-version: 1.1.45
-      - name: Install Node.js
+      - name: Install Node
         uses: actions/setup-node@v4
         with:
           node-version: 22.13.0
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.0
       - name: Install Dependencies
         run: bun install --frozen-lockfile
       - name: Lint & Type-Check
         run: bun run concurrently "bun run lint" "bun run type-check"
-  Build:
+  build:
     name: Build
     needs: Lint-and-Type-Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-        name: Install Bun
-        with:
-          bun-version: 1.1.45
-      - name: Install Node.js
+      - name: Install Node
         uses: actions/setup-node@v4
         with:
           node-version: 22.13.0
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.0
       - name: Install Dependencies
         run: bun install --frozen-lockfile
       - name: Build
