@@ -1,28 +1,48 @@
-# Turborepo starter
+# NK-Starter
 
-This is an official starter Turborepo.
+This is a [Turborepo](https://turbo.build/repo/) monorepo starter template. It provides a foundational setup for building modern web applications.
 
-## Using this example
+1. [Runtime and Package Manager](#runtime-and-package-manager)
+2. [What's Inside?](#whats-inside)
+3. [How to Run](#how-to-run)
+4. [Useful Links](#useful-links)
 
-Run the following command:
+## Runtime and Package Manager
 
-```sh
-npx create-turbo@latest
-```
+- **Runtime:** `node.js` `v22.13.0`  
+  [Node.js](https://nodejs.org/en/)
 
-## What's inside?
+- **Package Manager:** `bun` `v1.2.0`  
+  [Bun](https://bun.sh/)
 
-This Turborepo includes the following packages/apps:
+## What's Inside?
 
-### Apps and Packages
+This repository includes the following apps and packages:
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@nk/design-system`: a stub React component library shared by both `web` and `docs` applications
-- `@nk/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@nk/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### Apps
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- `@nk/web`: A `next.js` app.  
+  [Next.js](https://nextjs.org/)
+
+- `@nk/cms`: A `next.js` app integrated with `payload` CMS.  
+  [Next.js](https://nextjs.org/) | [Payload CMS](https://payloadcms.com/)
+
+- `@nk/storybook`: A `storybook` app for developing and testing components.  
+  [Storybook](https://storybook.js.org/)
+
+- `@nk/docs`: A `next.js` app powered by `fumadocs`.  
+  [Next.js](https://nextjs.org/) | [Fumadocs](https://fumadocs.vercel.app/)
+
+### Packages
+
+- `@nk/design-system`: A `react` components library built with `vite`.  
+  [React](https://reactjs.org/) | [Vite](https://vitejs.dev/)
+
+- `@nk/eslint-config`: Shared `eslint` configurations.  
+  [ESLint](https://eslint.org/)
+
+- `@nk/typescript-config`: Shared `tsconfig.json` configurations.  
+  [TypeScript](https://www.typescriptlang.org/)
 
 ### Utilities
 
@@ -31,43 +51,35 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
+- [Husky](https://typicode.github.io/husky/) for git hooks
+- [lint-staged](https://github.com/lint-staged/lint-staged/) for staged files processing
 
-### Build
+## How to Run
 
-To build all apps and packages, run the following command:
+1. **Install dependencies:**
 
-```
-cd my-turborepo
-bun run build
-```
+   ```sh
+   bun install
+   ```
 
-### Develop
+2. **Build the project:**
 
-To develop all apps and packages, run the following command:
+   ```sh
+   bun run build
+   ```
 
-```
-cd my-turborepo
-bun run dev
-```
+3. **Start development mode:**
 
-### Remote Caching
+   ```sh
+   bun run dev
+   ```
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
+4. **Lint, type-check or format as needed:**
+   ```sh
+   bun run lint
+   bun run type-check
+   bun run format
+   ```
 
 ## Useful Links
 
