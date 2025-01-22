@@ -1,1 +1,1 @@
-pnpm concurrently "pnpm lint-staged" "pnpm type-check" --group
+bun concurrently "bun lint-staged" "bun type-check" --group
