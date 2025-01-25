@@ -4,7 +4,7 @@ FROM base AS builder
 
 WORKDIR /app
 
-RUN turbo prune @nk/cms --docker
+RUN turbo prune @nk/docs --docker
  
 COPY bun.lock bun.lock
 COPY package.json package.json
@@ -28,9 +28,9 @@ ENV PORT="3000"
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-COPY --from=builder --chown=nextjs:nodejs /app/apps/cms/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/apps/cms/.next/static ./apps/cms/.next/static
-COPY --from=builder --chown=nextjs:nodejs /app/apps/cms/public ./apps/cms/public
+COPY --from=builder --chown=nextjs:nodejs /app/apps/docs/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/apps/docs/.next/static ./apps/docs/.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/apps/docs/public ./apps/docs/public
 
 USER nextjs
 

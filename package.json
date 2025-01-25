@@ -6,10 +6,15 @@
   "scripts": {
     "build": "turbo build --continue",
     "dev": "turbo dev",
+    "start": "turbo start",
     "type-check": "turbo type-check --continue",
     "lint": "turbo lint --continue",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "docker:build:base": "docker build -t nk/base-turbo .",
+    "docker:build": "turbo docker:build",
+    "docker:compose": "docker compose up -d",
+    "docker:create:network": "docker network create nk"
   },
   "devDependencies": {
     "@nk/eslint-config": "workspace:*",
@@ -25,7 +30,9 @@
     "typescript": "^5.7.3"
   },
   "trustedDependencies": [
-    "fumadocs-mdx",
+    "node-jq",
+    "ontextify",
+    "@nk/docs",
     "sharp",
     "@swc/core",
     "esbuild",

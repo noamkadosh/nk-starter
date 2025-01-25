@@ -8,6 +8,11 @@
       "env": [".env"],
       "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*"]
     },
+    "start": {
+      "dependsOn": ["build", "^start"],
+      "env": [".env"],
+      "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*"]
+    },
     "type-check": {},
     "lint": {
       "dependsOn": ["^lint"]
@@ -17,6 +22,17 @@
       "dependsOn": ["^build"],
       "cache": false,
       "persistent": true
+    },
+    "docker:build:base": {},
+    "docker:build": {
+      "dependsOn": ["docker:build:base", "^docker:build"],
+      "env": [".env"],
+      "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*"]
+    },
+    "docker:compose": {
+      "dependsOn": ["docker:build", "^docker:compose"],
+      "env": [".env"],
+      "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*"]
     }
   }
 }
