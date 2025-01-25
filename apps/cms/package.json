@@ -10,7 +10,8 @@
     "lint": "next lint",
     "payload": "payload",
     "generate:importmap": "payload generate:importmap",
-    "generate:types": "payload generate:types"
+    "generate:types": "payload generate:types",
+    "docker:build": "docker build -t nk/cms ../.. -f ./Dockerfile"
   },
   "dependencies": {
     "@payloadcms/next": "latest",

@@ -1,0 +1,65 @@
+services:
+  web:
+    container_name: nk/web
+    image: nk/web
+    build:
+      dockerfile: ./apps/web/Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - default
+  cms:
+    container_name: nk/cms
+    image: nk/cms
+    build:
+      dockerfile: ./apps/cms/Dockerfile
+    restart: always
+    ports:
+      - "3001:3001"
+    volumes:
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
+    working_dir: /home/node/app/
+    depends_on:
+      - postgres
+    networks:
+      - default
+  postgres:
+    container_name: nk/cms-db
+    image: postgres:latest
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - default
+  docs:
+    container_name: nk/docs
+    image: nk/docs
+    build:
+      dockerfile: ./apps/docs/Dockerfile
+    restart: always
+    ports:
+      - "3002:3002"
+    networks:
+      - default
+  storybook:
+    container_name: nk/storybook
+    image: nk/storybook
+    build:
+      dockerfile: ./apps/storybook/Dockerfile
+    restart: always
+    ports:
+      - "6006:6006"
+    networks:
+      - default
+volumes:
+  data:
+  pgdata:
+  node_modules:
+networks:
+  default:
+    name: nk
+    external: true

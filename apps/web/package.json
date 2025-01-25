@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --noEmit",
-    "lint": "next lint --max-warnings 0"
+    "lint": "next lint --max-warnings 0",
+    "docker:build": "docker build -t nk/web ../.. -f ./Dockerfile"
   },
   "dependencies": {
     "@nk/design-system": "workspace:*",

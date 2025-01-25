@@ -7,10 +7,12 @@ const config: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  reactStrictMode: true,
+  // Use "standalone" when using docker"
+  // output: "standalone",
   typescript: {
     ignoreBuildErrors: true,
   },
-  reactStrictMode: true,
 };
 
 export default withMDX(config);
