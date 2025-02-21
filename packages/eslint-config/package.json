@@ -58,7 +58,7 @@
     "eslint-plugin-tailwindcss": "^3.18.0",
     "eslint-plugin-testing-library": "^7.1.1",
     "eslint-plugin-turbo": "^2.3.3",
-    "eslint-plugin-unicorn": "^56.0.1",
+    "eslint-plugin-unicorn": "^57.0.0",
     "globals": "^15.13.0",
     "typescript-eslint": "^8.18.1"
   }
