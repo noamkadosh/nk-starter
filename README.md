@@ -35,7 +35,7 @@ This repository includes the following apps and packages:
 
 ### Packages
 
-- `@nk/design-system`: A `react` components library built with `vite`.  
+- `@nk/ui`: A `react` components library built with `vite`.  
   [React](https://reactjs.org/) | [Vite](https://vitejs.dev/)
 
 - `@nk/eslint-config`: Shared `eslint` configurations.  

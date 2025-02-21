@@ -1,5 +1,5 @@
 {
-  "name": "@nk/docs",
+  "name": "docs",
   "private": true,
   "type": "module",
   "scripts": {
