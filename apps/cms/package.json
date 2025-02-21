@@ -18,7 +18,7 @@
     "@payloadcms/payload-cloud": "latest",
     "@payloadcms/richtext-lexical": "latest",
     "graphql": "^16.8.1",
-    "next": "15.1.5",
+    "next": "15.1.7",
     "payload": "latest",
     "react": "19.0.0",
     "react-dom": "19.0.0",
