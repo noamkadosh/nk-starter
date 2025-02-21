@@ -29,7 +29,7 @@
     "@html-eslint/parser": "^0.32.0",
     "@next/eslint-plugin-next": "^15.1.5",
     "@tanstack/eslint-plugin-query": "^5.62.1",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.13.4",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@vitest/eslint-plugin": "^1.1.16",
     "eslint-config-prettier": "^9.1.0",
