@@ -1,5 +1,5 @@
 {
-  "name": "@nk/storybook",
+  "name": "design-system",
   "private": true,
   "type": "module",
   "scripts": {

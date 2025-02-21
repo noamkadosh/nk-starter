@@ -1,5 +1,5 @@
 {
-  "name": "@nk/web",
+  "name": "web",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
     "docker:build": "docker build -t nk/web ../.. -f ./Dockerfile"
   },
   "dependencies": {
-    "@nk/design-system": "workspace:*",
+    "@nk/ui": "workspace:*",
     "next": "15.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

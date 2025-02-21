@@ -1,5 +1,5 @@
 {
-  "name": "@nk/design-system",
+  "name": "@nk/ui",
   "private": true,
   "type": "module",
   "exports": {
